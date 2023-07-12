@@ -18,10 +18,11 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-
+	
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css" type="text/css">
 	<!-- Icomoon Icon Fonts-->
@@ -405,7 +406,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-1.jpg);">
+					<a href="#" class="work" style="background-image: url(./images/sprite-logo-0FD1748C65-seeklogo.com.png);">
 						<div class="desc">
 							<h3>Sprite_Clone</h3>
 							<span>Website Clone</span>
@@ -413,7 +414,7 @@
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-2.jpg);">
+					<a href="#" class="work" style="background-image: url(images/cruise.png);">
 						<div class="desc">
 							<h3>getCruise_Clone</h3>
 							<span>Website Clone</span>
@@ -421,7 +422,7 @@
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-3.jpg);">
+					<a href="#" class="work" style="background-image: url(images/angular\ true.jpg);">
 						<div class="desc">
 							<h3>Angular_Clone</h3>
 							<span>Responsive Website Clone</span>
@@ -429,7 +430,7 @@
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-4.jpg);">
+					<a href="#" class="work" style="background-image: url(images/Screenshot\ \(4\).png);">
 						<div class="desc">
 							<h3>Personal Portfolio</h3>
 							<span>Website Design(Template)</span>
@@ -459,33 +460,22 @@
 		</div>
 		<div class="choose animate-box">
 			<h2>Contact</h2>
-			<form action="#">
+			<form id="submit-form" method = "post" action="https://script.google.com/macros/s/AKfycbwrT-c37VYOjoyj9SuFOxdK6fcFKXPSAqmwLZrBx-uUBsvIhzGTUA08-zqUygyrs11cGw/exec">
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-					</div>
-				</div>
-				<div class="row form-group">
-					<div class="col-md-6">
-						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+						<input type="text" name="name" class="form-control" placeholder="Your name">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="email" class="form-control" placeholder="Your email address">
+						<input type="text" name="email" class="form-control" placeholder="Your email address">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-					</div>
-				</div>
-
-				<div class="row form-group">
-					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+						<textarea name="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
 					</div>
 				</div>
 				<div class="form-group">
@@ -496,9 +486,7 @@
 		</div>
 	</section>
 
-	<div id="map" class="fh5co-map"></div>
-	</div>
-	
+
 	<footer id="fh5co-footer">
 		<div class="container">
 			<div class="row">
@@ -527,6 +515,26 @@
 	<script src="js/jquery.easypiechart.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<!-- <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwrT-c37VYOjoyj9SuFOxdK6fcFKXPSAqmwLZrBx-uUBsvIhzGTUA08-zqUygyrs11cGw/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script> -->
 
 	</body>
 </html>
